@@ -16,10 +16,10 @@ public class App {
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Enter number 1: ");
+        logger.info("Enter number 1: ");
         String textNumber1 = bufferedReader.readLine();
 
-        System.out.println("Enter number 2: ");
+        logger.info("Enter number 2: ");
         String textNumber2 = bufferedReader.readLine();
 
         Long number1 = Long.valueOf(textNumber1);
@@ -28,6 +28,6 @@ public class App {
         BasicCalculator calculator = new BasicCalculator();
         Long result = calculator.sumar(number1, number2);
 
-        System.out.println(number1 + " + " + number2 + " = " + result);
+        logger.info(number1 + " + " + number2 + " = " + result);
     }
 }

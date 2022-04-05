@@ -23,13 +23,9 @@ public class BasicCalculator {
     }
 
     public Long dividir(Long number1, Long number2) {
-        logger.info( "Divide {} / {}", number1, number2 );
-        long result = 0L;
-        try {
-            result = number1 / number2;
-        }catch (ArithmeticException error){
-            logger.error("División por 0 no permitida", error);
-        }
-        return result;
+        if (number2 == 0)
+            throw new ArithmeticException("Number cannot be equals to 0, 'math indetermination'");
+        logger.info("Dividing {} / {}", number1, number2);
+        return number1 / number2;
     }
 }
